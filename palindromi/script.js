@@ -3,7 +3,6 @@ parola = parola.toLowerCase();
 
 Palindrome(parola);
 
-
 function Palindrome() {
 
     // converte stringa in un array
