@@ -1,18 +1,22 @@
-var PoD = prompt("Sfida il computer. Pari o Dispari?");
-PoD = PoD.toLowerCase();
-
-if (PoD === "pari" || PoD === "dispari") {
-    var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5:"));
-        if (Number.isNaN(numeroUtente)) {
-        console.log("Puoi inserire solo un numero da 1 a 5");
-        } else if (numeroUtente < 1 || numeroUtente > 5) {
-        console.log("Hai inserito un numero minore di 1 o maggiore di 5.");
+var checkNumber = false;
+do{
+    var PoD = prompt("Sfida il computer. Pari o Dispari?");
+    PoD = PoD.toLowerCase();
+    
+    if (PoD === "pari" || PoD === "dispari") {
+        var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5:"));
+            if (Number.isNaN(numeroUtente)) {
+            console.log("Puoi inserire solo un numero da 1 a 5");
+            } else if (numeroUtente < 1 || numeroUtente > 5) {
+            console.log("Hai inserito un numero minore di 1 o maggiore di 5.");
+            } else {
+                finale();
+                checkNumber = true;
+            } 
         } else {
-            finale();
-        } 
-    } else {
-    console.log("Non hai scritto correttamente pari o dispari!");
-}
+        console.log("Non hai scritto correttamente pari o dispari!");
+    }
+} while(!checkNumber);
 
 var numeroPc = Math.floor(Math.random()*5);
 
