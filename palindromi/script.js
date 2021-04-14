@@ -9,10 +9,10 @@ function Palindrome() {
     // converte stringa in un array
     var arrayValues = parola.split('');
 
-    // legge array al contrario
+    // legge array al contrario, reverse funziona solo su array e non su stringa
     var reverseArrayValues = arrayValues.reverse();
 
-    // converte array in stringa
+    // riconverte array in stringa
     var reverseParola = reverseArrayValues.join('');
 
     if(parola == reverseParola) {
