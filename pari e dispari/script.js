@@ -1,5 +1,5 @@
-var checkNumber = false;
 do{
+    var checkNumber = false;
     var PoD = prompt("Sfida il computer. Pari o Dispari?");
     PoD = PoD.toLowerCase();
     
