@@ -1,9 +1,19 @@
 var parola = prompt("inserisci una parola palindroma");
-parola = parola.toLowerCase();
+var parolaUtente = parola.toLowerCase();
 
-Palindrome(parola);
+var risultato = Palindrome(parolaUtente);
 
-function Palindrome() {
+if (risultato) {
+    console.log('La parola inserita è palindroma');
+    document.getElementById('risultato').innerHTML = ("La parola da te inserita '" + parola + "' è palindroma.")
+} else {        
+    console.log('La parola inserita non è palindroma');
+    document.getElementById('risultato').innerHTML = ("La parola da te inserita '" + parola + "' non è palindroma.")
+
+}
+//Palindrome(parolaUtente2)
+
+function Palindrome(parola) {
 
     // converte stringa in un array
     var arrayValues = parola.split('');
@@ -15,14 +25,19 @@ function Palindrome() {
     var reverseParola = reverseArrayValues.join('');
 
     if(parola == reverseParola) {
-        console.log(parola);
-        console.log('La parola inserita è palindroma');
-        document.getElementById('risultato').innerHTML = ("La parola da te inserita '" + parola + "' è palindroma.")
+        return true;
+    } else {
+        return false;
+    }
+}
+        /*console.log(parola);
+/
     }
     else {
+        return false;
         console.log(parola);
         console.log('La parola inserita non è palindroma');
         document.getElementById('risultato').innerHTML = ("La parola da te inserita '" + parola + "' non è palindroma.")
     }
 }
-
+*/
